@@ -1,0 +1,54 @@
+h1
+{
+	font-size : 34px;
+}
+
+.navbar
+{
+	padding: 0 150px;
+
+	.logo
+	{
+		display         : flex;
+		flex-direction  : row;
+		justify-content : center;
+		align-items     : center;
+
+		.navbar-brand
+		{
+			img
+			{
+				width : 100px;
+			}
+		}
+
+		.brand-name
+		{
+			display        : flex;
+			flex-direction : column;
+		}
+	}
+}
+
+.call-to-action
+{
+	background      : url("../img/landing.jpg") no-repeat center;
+	background-size : cover;
+	padding         : 50px;
+	display         : flex;
+	flex-direction  : column;
+	justify-content : center;
+	align-items     : center;
+
+	.key
+	{
+		margin: 70px 0 50px 0;
+		width: 40%;
+	}
+
+	h1
+	{
+		color      : white;
+		text-align : center;
+	}
+}
