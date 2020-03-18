@@ -6,14 +6,14 @@ export default class Landing extends Component
     render()
     {
         return (
-            <div className="wrapper">
-                <div className='call-to-action'>
+            <div className='container'>
+                <div className="call-to-action">
                     <h1>Voter</h1>
-                    <input type="text" className="key form-control" />
-                    <a href="#" className="btn">Voter</a>
-                </div>
-                <div className="content">
-
+                    <div className="form-group">
+                        <label htmlFor="key">Saisissez votre clef : </label>
+                        <input className='form-control' id="key" type="text"/>
+                    </div>
+                    <Link to='/candidats' className="btn btn-primary-light">Voter</Link>
                 </div>
             </div>
         );
