@@ -138,5 +138,27 @@ body
 				display : none;
 			}
 		}
+		
+		&.administration
+		{
+			.card
+			{
+				padding: 25px;
+				.form-control
+				{
+					margin: 10px 0 15px;
+				}
+				
+				.btn-bar
+				{
+					padding: 10px 0;
+				}
+				
+				hr
+				{
+					margin: 0;
+				}
+			}
+		}
 	}
 }

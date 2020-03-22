@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c735806b-7eb2-4daf-9f9f-e3289426e8c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/administration.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/candidats.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/candidats.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tile.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tile.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_buttons.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/scss/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -46,8 +45,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Programmes\laragon\www\tacosie\src\scss\components" />
       <recent name="D:\Programmes\laragon\www\tacosie\src\components" />
+      <recent name="D:\Programmes\laragon\www\tacosie\src\scss\components" />
       <recent name="D:\Programmes\laragon\www\tacosie\src\img" />
       <recent name="D:\Programmes\laragon\www\tacosie\src" />
       <recent name="D:\Projets Perso\tacosie\src\img" />
@@ -96,7 +95,8 @@
       <workItem from="1584087601048" duration="11864000" />
       <workItem from="1584462375905" duration="30000" />
       <workItem from="1584567305087" duration="3558000" />
-      <workItem from="1584715922879" duration="11500000" />
+      <workItem from="1584715922879" duration="12055000" />
+      <workItem from="1584895458145" duration="2148000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1584570170508</created>
@@ -112,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584727564747</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Modal to confirm choice">
+      <created>1584737450300</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584737450300</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +128,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="." />
     <MESSAGE value="2 input fields : CNI &amp; private key&#10;Fields must be filled" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 input fields : CNI &amp; private key&#10;Fields must be filled" />
+    <MESSAGE value="Modal to confirm choice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modal to confirm choice" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#ESLint" timestamp="1584090120088">
@@ -136,10 +144,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584443404134" />
-    <state x="571" y="28" key="CommitChangelistDialog2" timestamp="1584727564225">
+    <state x="571" y="28" key="CommitChangelistDialog2" timestamp="1584737449894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="28" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584727564225" />
+    <state x="571" y="28" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584737449894" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1584105289991">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -160,10 +168,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1879" height="262" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584459218406" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1584570175131">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1584737592989">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584570175131" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584737592989" />
     <state x="539" y="183" key="search.everywhere.popup" timestamp="1584444303499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
