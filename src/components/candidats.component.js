@@ -17,8 +17,8 @@ export default class Pros extends Component
             isActive: false,
             candidats: [],
             chosenCandidat: {},
-            contractAddress: props.location.state.contractAddress,
-            abi: props.location.state.abi,
+            privateKey: props.location.state.privateKey,
+            cni: props.location.state.cni,
         };
     }
 
