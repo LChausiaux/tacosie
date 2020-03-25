@@ -16,15 +16,15 @@ export default class Pros extends Component
 
     componentWillMount()
     {
-        axios.get('/get-results')
+        axios.get('http://localhost:4000/get-results')
             .then(res =>
             {
                 let labelsArr = [];
                 let dataArr = [];
 
                 for (let i = 0; i < res.data.length; i++) {
-                    labelsArr.push(res.data.candidate,);
-                    dataArr.push(res.data.vote,);
+                    labelsArr.push(res.data[i].candidate,);
+                    dataArr.push(res.data[i].vote,);
                 }
 
                 this.setState({

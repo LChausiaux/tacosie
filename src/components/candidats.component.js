@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import Tile from "./tile.component";
 import Gringo from "../img/gringo.jpg";
 import axios from "axios";
+import {Bar} from "react-chartjs-2";
+import { ethers } from "ethers";
 
 export default class Pros extends Component
 {
@@ -25,7 +27,7 @@ export default class Pros extends Component
     componentWillMount()
     {
         //ajax requests
-        axios.get('/get-candidates')
+        axios.get('http://localhost:4000/get-candidates')
             .then(res =>
             {
                 let candidatsArr = [];
@@ -58,9 +60,27 @@ export default class Pros extends Component
     //Send vote
     sendData()
     {
-        axios.get('/vote')
+        axios.get('http://localhost:4000/vote')
             .then(res =>
             {
+                // console.log(this.state.chosenCandidat.name)
+                let contractAddress = res.data.contractAddress
+                let abi = res.data.abi
+                let chainUrl = res.data.chainUrl
+                let networkId = res.data.networkId
+                let privateKey = "0x12aef05baaee17481d12dafbd794b2c39d4dd0a794e70e2a340a88de818cdf5a"
+                let provider = new ethers.providers.JsonRpcProvider(chainUrl, networkId)
+                let user = new ethers.Wallet(privateKey, provider)
+                let contract = new ethers.Contract(contractAddress, abi, provider)
+                let userWithSigner = contract.connect(user)
+
+                contract.voteOptions().then(res => {
+                    userWithSigner.vote(res.indexOf(this.state.chosenCandidat.name)).then(tx => {
+                        tx.wait().then(res => {
+                            // REDIRECT HERE
+                        })
+                    })
+                })
             });
     }
 
