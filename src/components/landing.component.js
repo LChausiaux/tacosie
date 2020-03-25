@@ -65,8 +65,8 @@ export default class Landing extends Component
                                 to={{
                                     pathname: "/candidats",
                                     state: {
-                                        abi: this.state.CNI,
-                                        contractAddress: this.state.privateKey
+                                        cni: this.state.CNI,
+                                        privateKey: this.state.privateKey
                                     }
                                 }}
                                 />
