@@ -69,9 +69,9 @@ export default class Pros extends Component
                 let abi = res.data.abi
                 let chainUrl = res.data.chainUrl
                 let networkId = res.data.networkId
-                let privateKey = "0x12aef05baaee17481d12dafbd794b2c39d4dd0a794e70e2a340a88de818cdf5a"
                 let provider = new ethers.providers.JsonRpcProvider(chainUrl, networkId)
-                let user = new ethers.Wallet(privateKey, provider)
+                let user = new ethers.Wallet.fromMnemonic(`${this.state.cni} ${this.state.privateKey}`)
+                user = new ethers.Wallet(user.privateKey, provider)
                 let contract = new ethers.Contract(contractAddress, abi, provider)
                 let userWithSigner = contract.connect(user)
 
