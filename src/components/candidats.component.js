@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import Tile from "./tile.component";
 import Gringo from "../img/gringo.jpg";
 import axios from "axios";
-import {Bar} from "react-chartjs-2";
 import { ethers } from "ethers";
+import {Redirect} from "react-router-dom";
 
 export default class Pros extends Component
 {
@@ -20,6 +20,7 @@ export default class Pros extends Component
             chosenCandidat: {},
             privateKey: props.location.state.privateKey,
             cni: props.location.state.cni,
+            voted: false,
         };
     }
 
@@ -77,7 +78,9 @@ export default class Pros extends Component
                 contract.voteOptions().then(res => {
                     userWithSigner.vote(res.indexOf(this.state.chosenCandidat.name)).then(tx => {
                         tx.wait().then(res => {
-                            // REDIRECT HERE
+                            this.setState({
+                                voted: true
+                            })
                         })
                     })
                 })
@@ -125,6 +128,11 @@ export default class Pros extends Component
                 </div>
                 <div className="row justify-content-center">
                     { this.displayCandidats() }
+                    {
+                        this.state.voted
+                            ? <Redirect to="/charts" />
+                            : ''
+                    }
                 </div>
             </div>
         );
