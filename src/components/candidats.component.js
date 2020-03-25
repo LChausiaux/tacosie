@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import Tile from "./tile.component";
 import Gringo from "../img/gringo.jpg";
+import axios from "axios";
+import {Bar} from "react-chartjs-2";
 
 export default class Pros extends Component
 {
@@ -13,38 +15,54 @@ export default class Pros extends Component
 
         this.state = {
             isActive: false,
-            candidat1:
-                {
-                    name: 'Nom candidat 1',
-                    partit: 'Partit 1',
-                    picture: 'gringo.jpg',
-                },
-            candidat2:
-                {
-                    name: 'Nom candidat 2',
-                    partit: 'Partit 2',
-                    picture: 'gringo.jpg',
-                },
-            candidat3:
-                {
-                    name: 'Nom candidat 3',
-                    partit: 'Partit 3',
-                    picture: 'gringo.jpg',
-                },
-            candidat4:
-                {
-                    name: 'Nom candidat 4',
-                    partit: 'Partit 4',
-                    picture: 'gringo.jpg',
-                },
-            chosenCandidat: {}
-        }
+            candidats: [],
+            chosenCandidat: {},
+            contractAddress: props.location.state.contractAddress,
+            abi: props.location.state.abi,
+        };
+    }
+
+
+    componentWillMount()
+    {
+        //ajax requests
+        axios.get('/get-candidates')
+            .then(res =>
+            {
+                let candidatsArr = [];
+
+                for (let i = 0; i < res.data.length; i++) {
+                    candidatsArr.push({
+                        name: res.data[i],
+                        partit: 'partit',
+                        picture: 'gringo.jpg',
+                    });
+                }
+
+                this.setState({
+                    candidats: candidatsArr
+                });
+            });
+    }
+
+    displayCandidats()
+    {
+        return this.state.candidats.map((candidat, i) =>
+        {
+            return <Tile
+                chooseCandidat={this.chooseCandidat}
+                candidat={candidat}
+            />;
+        });
     }
 
     //Send vote
     sendData()
     {
-        //Do your magic !
+        axios.get('/vote')
+            .then(res =>
+            {
+            });
     }
 
 
@@ -81,30 +99,13 @@ export default class Pros extends Component
                             <img src={Gringo} alt=""/>
                         </div>
                         <div className="btn-bar">
-                            <div className='btn btn-primary-light' onClick={ this.removeModal }>Annuler</div>
+                            <div className='btn btn-primary-light' onClick={this.removeModal}>Annuler</div>
                             <div className='btn btn-primary' onClick={this.sendData}>Valider mon choix</div>
                         </div>
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <Tile
-                        chooseCandidat={this.chooseCandidat}
-                        candidat={this.state.candidat1}
-                    />
-                    <Tile
-                        chooseCandidat={this.chooseCandidat}
-                        candidat={this.state.candidat2}
-                    />
-                </div>
-                <div className="row justify-content-center">
-                    <Tile
-                        chooseCandidat={this.chooseCandidat}
-                        candidat={this.state.candidat3}
-                    />
-                    <Tile
-                        chooseCandidat={this.chooseCandidat}
-                        candidat={this.state.candidat4}
-                    />
+                    { this.displayCandidats() }
                 </div>
             </div>
         );

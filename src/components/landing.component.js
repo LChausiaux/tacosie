@@ -59,7 +59,15 @@ export default class Landing extends Component
                     </div>
                     {
                         this.state.validateForm
-                            ? <Redirect to="/candidats"/>
+                            ? <Redirect
+                                to={{
+                                    path: "/candidats",
+                                    state: {
+                                        abi: document.getElementById('CNI').value,
+                                        contractAddress: document.getElementById('privateKey').value
+                                    }
+                                }}
+                                />
                             : ''
                     }
                     <div onClick={this.validateForm}

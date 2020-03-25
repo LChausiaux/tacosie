@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Graph from "./graph.component";
-import {Bar, Pie} from 'react-chartjs-2';
+import {Bar} from 'react-chartjs-2';
+import axios from "axios";
 
 export default class Pros extends Component
 {
@@ -9,31 +10,57 @@ export default class Pros extends Component
     {
         super();
         this.state = {
-            candidatsVotes: <Bar
-                data={{
-                    labels: ['Candidat 1', 'Candidat 2', 'Candidat 3', 'Candidat 4'],
-                    datasets: [
-                        {
-                            data: [
-                                50,
-                                20,
-                                63,
-                                2,
-                            ],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.6)',
-                                'rgba(54, 162, 235, 0.6)',
-                                'rgba(255, 206, 86, 0.6)',
-                                'rgba(75, 192, 192, 0.6)',
-                            ]
-                        }
-                    ]
-                }}
-                options={{
-                    legend: false
-                }}
-            />
+            candidatsVotes: ''
         }
+    }
+
+    componentWillMount()
+    {
+        axios.get('/get-results')
+            .then(res =>
+            {
+                let labelsArr = [];
+                let dataArr = [];
+
+                for (let i = 0; i < res.data.length; i++) {
+                    labelsArr.push(res.data.candidate,);
+                    dataArr.push(res.data.vote,);
+                }
+
+                this.setState({
+                    candidatsVotes: <Bar
+                        data={{
+                            labels: labelsArr,
+                            datasets: [
+                                {
+                                    data: dataArr,
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.6)',
+                                        'rgba(54, 162, 235, 0.6)',
+                                        'rgba(255, 206, 86, 0.6)',
+                                        'rgba(75, 192, 192, 0.6)',
+                                        'rgba(255, 99, 132, 0.6)',
+                                        'rgba(54, 162, 235, 0.6)',
+                                        'rgba(255, 206, 86, 0.6)',
+                                        'rgba(75, 192, 192, 0.6)',
+                                        'rgba(255, 99, 132, 0.6)',
+                                        'rgba(54, 162, 235, 0.6)',
+                                        'rgba(255, 206, 86, 0.6)',
+                                        'rgba(75, 192, 192, 0.6)',
+                                        'rgba(255, 99, 132, 0.6)',
+                                        'rgba(54, 162, 235, 0.6)',
+                                        'rgba(255, 206, 86, 0.6)',
+                                        'rgba(75, 192, 192, 0.6)',
+                                    ]
+                                }
+                            ]
+                        }}
+                        options={{
+                            legend: false
+                        }}
+                    />,
+                })
+            });
     }
 
     render()

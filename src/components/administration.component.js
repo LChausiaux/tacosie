@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import Graph from "./graph.component";
-import {Bar, Pie} from 'react-chartjs-2';
+import axios from "axios";
 
 export default class Pros extends Component
 {
@@ -18,9 +17,43 @@ export default class Pros extends Component
             '            <label for="candidat-name">Ajouter un candidat</label>\n' +
             '            <input id=\'candidat-name\' name=\'candidat-name[]\' class=\'form-control\' type="text"\n' +
             '                   placeholder=\'Nom\'/>\n' +
-            '            <input id=\'candidat-partit\' name=\'candidat-partit[]\' class=\'form-control\' type="text"\n' +
-            '                   placeholder=\'Partit\'/>\n' +
             '        </div>\n';
+    }
+
+    addElection()
+    {
+        let adminKey = document.getElementById('privateKey').value;
+        let start = Date.parse(document.getElementById('start').value) / 1000;
+        let end = Date.parse(document.getElementById('end').value) / 1000;
+
+        /*
+                axios.post('/set-election-date', {
+                    adminPrivateKey: adminKey,
+                    startDate: start,
+                    endDate: end
+                })
+                    .then(function (response)
+                    {
+                        console.log(response);
+                    });
+        */
+        let candidatesArr = [];
+        let elements = document.getElementById('insert-election').elements['candidat-name'];
+        for (let i = 0; i < elements.length; i++) {
+            candidatesArr.push(elements[i].value);
+        }
+
+        /*
+        axios.post('/insert-cadidates', {
+            adminPrivateKey: adminKey,
+            candidates: candidatesArr,
+        })
+            .then(function (response)
+            {
+                console.log(response);
+            });
+*/
+
     }
 
     render()
@@ -29,36 +62,38 @@ export default class Pros extends Component
             <div className='container administration'>
                 <div className="row justify-content-center">
                     <div className="card col-sm-9">
-                        <div className="form-group">
-                            <label htmlFor="address">Ajouter une adresse</label>
-                            <input id='address' name='address' className='form-control' type="text"
-                                   placeholder={'Adresse'}/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="start">Ouverture des votes</label>
-                            <input id="start" className='form-control' type="datetime-local"/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="end">Fermeture des votes</label>
-                            <input id="end" className='form-control' type="datetime-local"/>
-                        </div>
-                        <div className="form-group">
-                            <div className="candidat" id='candidat-container'>
-                                <label htmlFor="candidat-name">Ajouter un candidat</label>
-                                <input id='candidat-name' name='candidat-name[]' className='form-control' type="text"
-                                       placeholder='Nom'/>
-                                <input id='candidat-partit' name='candidat-partit[]' className='form-control'
-                                       type="text"
-                                       placeholder='Partit'/>
+                        <form id='insert-election' action="">
+                            <div className="form-group">
+                                <label htmlFor="address">Adresse admin</label>
+                                <input id='privateKey' name='privateKey' className='form-control' type="text"
+                                       placeholder={'Adresse'}/>
                             </div>
+                            <div className="form-group">
+                                <label htmlFor="start">Ouverture des votes</label>
+                                <input id="start" className='form-control' type="datetime-local"/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="end">Fermeture des votes</label>
+                                <input id="end" className='form-control' type="datetime-local"/>
+                            </div>
+                            <div className="form-group">
+                                <div className="candidat" id='candidat-container'>
+                                    <label htmlFor="candidat-name">Ajouter un candidat</label>
+                                    <input id='candidat-name' name='candidat-name[]' className='form-control'
+                                           type="text"
+                                           placeholder='Nom'/>
+                                </div>
+                                <div className="btn-bar">
+                                    <div className='btn btn-primary-light' onClick={this.addCandidat}>Ajouter un autre
+                                        candidat
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
                             <div className="btn-bar">
-                                <div className='btn btn-primary-light' onClick={this.addCandidat}>Ajouter un autre candidat</div>
+                                <div className='btn btn-primary' onClick={this.addElection}>Enregistrer l'élection</div>
                             </div>
-                        </div>
-                        <hr/>
-                        <div className="btn-bar">
-                            <div className='btn btn-primary'>Enregistrer l'élection</div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
