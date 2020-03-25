@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import Tile from "./tile.component";
 import Gringo from "../img/gringo.jpg";
 import axios from "axios";
-import {Bar} from "react-chartjs-2";
 
 export default class Pros extends Component
 {
