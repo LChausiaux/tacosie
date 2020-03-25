@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c735806b-7eb2-4daf-9f9f-e3289426e8c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/administration.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/administration.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/candidats.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/candidats.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/landing.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +98,7 @@
       <workItem from="1584947245688" duration="352000" />
       <workItem from="1584981562382" duration="731000" />
       <workItem from="1585037472118" duration="542000" />
-      <workItem from="1585128542717" duration="7019000" />
+      <workItem from="1585128542717" duration="8307000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1584570170508</created>
@@ -134,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584897631252</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Calls API">
+      <created>1585136575990</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585136575990</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +146,8 @@
     <MESSAGE value="2 input fields : CNI &amp; private key&#10;Fields must be filled" />
     <MESSAGE value="Modal to confirm choice" />
     <MESSAGE value="Added administration panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added administration panel" />
+    <MESSAGE value="Calls API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calls API" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#ESLint" timestamp="1584090120088">
@@ -160,10 +162,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584443404134" />
-    <state x="571" y="28" key="CommitChangelistDialog2" timestamp="1584897630417">
+    <state x="571" y="28" key="CommitChangelistDialog2" timestamp="1585136575407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="28" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584897630417" />
+    <state x="571" y="28" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585136575407" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1584105289991">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -184,10 +186,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1879" height="262" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584459218406" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1584897638014">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1585136579479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584897638014" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585136579479" />
     <state x="539" y="183" key="search.everywhere.popup" timestamp="1584444303499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

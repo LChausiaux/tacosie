@@ -37,7 +37,9 @@ export default class Landing extends Component
         let validation = this.state.CNI !== '' && this.state.privateKey !== '';
 
         this.setState({
-            validateForm: validation
+            validateForm: validation,
+            CNI: document.getElementById('CNI').value,
+            privateKey: document.getElementById('privateKey').value,
         });
     };
 
@@ -61,10 +63,10 @@ export default class Landing extends Component
                         this.state.validateForm
                             ? <Redirect
                                 to={{
-                                    path: "/candidats",
+                                    pathname: "/candidats",
                                     state: {
-                                        abi: document.getElementById('CNI').value,
-                                        contractAddress: document.getElementById('privateKey').value
+                                        abi: this.state.CNI,
+                                        contractAddress: this.state.privateKey
                                     }
                                 }}
                                 />
