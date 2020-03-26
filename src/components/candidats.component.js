@@ -14,6 +14,8 @@ export default class Pros extends Component
         this.sendData = this.sendData.bind(this);
         this.removeModal = this.removeModal.bind(this);
 
+        this.apiUrl = process.env.URL_API || "http://localhost:4000"
+
         this.state = {
             isActive: false,
             candidats: [],
@@ -28,7 +30,7 @@ export default class Pros extends Component
     componentWillMount()
     {
         //ajax requests
-        axios.get('http://localhost:4000/get-candidates')
+        axios.get(`${this.apiUrl}/get-candidates`)
             .then(res =>
             {
                 let candidatsArr = [];
@@ -61,7 +63,7 @@ export default class Pros extends Component
     //Send vote
     sendData()
     {
-        axios.get('http://localhost:4000/vote')
+        axios.get(`${this.apiUrl}/vote`)
             .then(res =>
             {
                 // console.log(this.state.chosenCandidat.name)

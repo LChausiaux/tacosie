@@ -9,6 +9,7 @@ export default class Pros extends Component
     constructor()
     {
         super();
+        this.apiUrl = process.env.URL_API || "http://localhost:4000"
         this.state = {
             candidatsVotes: ''
         }
@@ -16,7 +17,7 @@ export default class Pros extends Component
 
     componentWillMount()
     {
-        axios.get('http://localhost:4000/get-results')
+        axios.get(`${this.apiUrl}/get-results`)
             .then(res =>
             {
                 let labelsArr = [];
