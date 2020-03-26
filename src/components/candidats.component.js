@@ -36,8 +36,7 @@ export default class Pros extends Component
                 for (let i = 0; i < res.data.length; i++) {
                     candidatsArr.push({
                         name: res.data[i],
-                        partit: 'partit',
-                        picture: 'gringo.jpg',
+                        picture: 'candidat' + i + '.jpg',
                     });
                 }
 
@@ -112,9 +111,6 @@ export default class Pros extends Component
                         <div className="header">
                             <div className="title">
                                 {this.state.chosenCandidat.name}
-                            </div>
-                            <div className="subtitle">
-                                {this.state.chosenCandidat.partit}
                             </div>
                         </div>
                         <div className="content">

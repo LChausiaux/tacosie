@@ -26,34 +26,11 @@ export default class Pros extends Component
         let start = Date.parse(document.getElementById('start').value) / 1000;
         let end = Date.parse(document.getElementById('end').value) / 1000;
 
-        /*
-                axios.post('/set-election-date', {
-                    adminPrivateKey: adminKey,
-                    startDate: start,
-                    endDate: end
-                })
-                    .then(function (response)
-                    {
-                        console.log(response);
-                    });
-        */
         let candidatesArr = [];
         let elements = document.getElementById('insert-election').elements['candidat-name'];
         for (let i = 0; i < elements.length; i++) {
             candidatesArr.push(elements[i].value);
         }
-
-        /*
-        axios.post('/insert-cadidates', {
-            adminPrivateKey: adminKey,
-            candidates: candidatesArr,
-        })
-            .then(function (response)
-            {
-                console.log(response);
-            });
-*/
-
     }
 
     render()

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c735806b-7eb2-4daf-9f9f-e3289426e8c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/img/candidat1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/administration.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/administration.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/candidats.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/candidats.component.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,9 +45,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programmes\laragon\www\tacosie\src\img" />
       <recent name="D:\Programmes\laragon\www\tacosie\src\components" />
       <recent name="D:\Programmes\laragon\www\tacosie\src\scss\components" />
-      <recent name="D:\Programmes\laragon\www\tacosie\src\img" />
       <recent name="D:\Programmes\laragon\www\tacosie\src" />
       <recent name="D:\Projets Perso\tacosie\src\img" />
     </key>
@@ -99,7 +100,8 @@
       <workItem from="1584947245688" duration="352000" />
       <workItem from="1584981562382" duration="731000" />
       <workItem from="1585037472118" duration="542000" />
-      <workItem from="1585128542717" duration="11157000" />
+      <workItem from="1585128542717" duration="11827000" />
+      <workItem from="1585240953463" duration="3368000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1584570170508</created>
@@ -171,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585142704492</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="redirection after vote">
+      <created>1585142898035</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585142898035</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +196,8 @@
     <MESSAGE value="names changed" />
     <MESSAGE value="names changed 2" />
     <MESSAGE value="removed unused import" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed unused import" />
+    <MESSAGE value="redirection after vote" />
+    <option name="LAST_COMMIT_MESSAGE" value="redirection after vote" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#ESLint" timestamp="1584090120088">
@@ -202,10 +212,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584443404134" />
-    <state x="571" y="28" key="CommitChangelistDialog2" timestamp="1585142704112">
+    <state x="571" y="28" key="CommitChangelistDialog2" timestamp="1585142897604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="28" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585142704112" />
+    <state x="571" y="28" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585142897604" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1584105289991">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -230,10 +240,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="659" y="229" key="MultipleFileMergeDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585142714796" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1585140565771">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1585142903025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585140565771" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585142903025" />
     <state x="689" y="295" key="git4idea.merge.GitPullDialog" timestamp="1585142707671">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
