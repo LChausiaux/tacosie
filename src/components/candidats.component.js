@@ -14,6 +14,8 @@ export default class Pros extends Component
         this.sendData = this.sendData.bind(this);
         this.removeModal = this.removeModal.bind(this);
 
+        this.apiUrl = process.env.URL_API || "http://localhost:4000"
+
         this.state = {
             isActive: false,
             candidats: [],
@@ -28,7 +30,7 @@ export default class Pros extends Component
     componentWillMount()
     {
         //ajax requests
-        axios.get('http://localhost:4000/get-candidates')
+        axios.get(`${this.apiUrl}/get-candidates`)
             .then(res =>
             {
                 let candidatsArr = [];
@@ -60,7 +62,7 @@ export default class Pros extends Component
     //Send vote
     sendData()
     {
-        axios.get('http://localhost:4000/vote')
+        axios.get(`${this.apiUrl}/vote`)
             .then(res =>
             {
                 // console.log(this.state.chosenCandidat.name)
@@ -68,9 +70,9 @@ export default class Pros extends Component
                 let abi = res.data.abi
                 let chainUrl = res.data.chainUrl
                 let networkId = res.data.networkId
-                let privateKey = "0x12aef05baaee17481d12dafbd794b2c39d4dd0a794e70e2a340a88de818cdf5a"
                 let provider = new ethers.providers.JsonRpcProvider(chainUrl, networkId)
-                let user = new ethers.Wallet(privateKey, provider)
+                let user = new ethers.Wallet.fromMnemonic(`${this.state.cni} ${this.state.privateKey}`)
+                user = new ethers.Wallet(user.privateKey, provider)
                 let contract = new ethers.Contract(contractAddress, abi, provider)
                 let userWithSigner = contract.connect(user)
 
