@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import Tile from "./tile.component";
-import Gringo from "../img/gringo.jpg";
 import axios from "axios";
 import { ethers } from "ethers";
 import {Redirect} from "react-router-dom";
+import Candidat from '../img/candidat.jpg';
 
 export default class Pros extends Component
 {
@@ -18,7 +18,7 @@ export default class Pros extends Component
 
         this.state = {
             isActive: false,
-            candidats: [],
+            candidats: [{}, {}],
             chosenCandidat: {},
             privateKey: props.location.state.privateKey,
             cni: props.location.state.cni,
@@ -38,7 +38,7 @@ export default class Pros extends Component
                 for (let i = 0; i < res.data.length; i++) {
                     candidatsArr.push({
                         name: res.data[i],
-                        picture: 'candidat' + i + '.jpg',
+                        picture: {Candidat},
                     });
                 }
 
@@ -116,7 +116,7 @@ export default class Pros extends Component
                             </div>
                         </div>
                         <div className="content">
-                            <img src={Gringo} alt=""/>
+                            <img src={Candidat} alt=""/>
                         </div>
                         <div className="btn-bar">
                             <div className='btn btn-primary-light' onClick={this.removeModal}>Annuler</div>

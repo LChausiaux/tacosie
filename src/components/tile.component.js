@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Gringo from '../img/gringo.jpg';
+import Candidat from '../img/candidat.jpg';
 
 export default class Tile extends Component
 {
@@ -23,12 +23,9 @@ export default class Tile extends Component
                     <div className="title">
                         {this.props.candidat.name}
                     </div>
-                    <div className="subtitle">
-                        {this.props.candidat.partit}
-                    </div>
                 </div>
                 <div className="content">
-                    <img src={Gringo} alt=""/>
+                    <img src={Candidat} alt=""/>
                 </div>
                 <div className="btn-bar">
                     <div className='btn btn-primary-light' onClick={ this.sendCandidat }>Choisir</div>
