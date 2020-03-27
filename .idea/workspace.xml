@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c735806b-7eb2-4daf-9f9f-e3289426e8c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/img/candidat1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/administration.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/administration.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/candidats.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/candidats.component.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +41,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programmes\laragon\www\tacosie\src\img" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Programmes\laragon\www\tacosie\src\img" />
       <recent name="D:\Programmes\laragon\www\tacosie\src\components" />
@@ -101,7 +101,7 @@
       <workItem from="1584981562382" duration="731000" />
       <workItem from="1585037472118" duration="542000" />
       <workItem from="1585128542717" duration="11827000" />
-      <workItem from="1585240953463" duration="3368000" />
+      <workItem from="1585240953463" duration="3628000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1584570170508</created>
@@ -180,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585142898035</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Partit removed&#10;Added 4 candidat pictures">
+      <created>1585262356899</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585262356899</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +204,8 @@
     <MESSAGE value="names changed 2" />
     <MESSAGE value="removed unused import" />
     <MESSAGE value="redirection after vote" />
-    <option name="LAST_COMMIT_MESSAGE" value="redirection after vote" />
+    <MESSAGE value="Partit removed&#10;Added 4 candidat pictures" />
+    <option name="LAST_COMMIT_MESSAGE" value="Partit removed&#10;Added 4 candidat pictures" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#ESLint" timestamp="1584090120088">
@@ -208,14 +216,15 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="525" y="203" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1584095141512" />
-    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584443404134">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2610" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585298184247">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584443404134" />
-    <state x="571" y="28" key="CommitChangelistDialog2" timestamp="1585142897604">
+    <state x="2610" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585298184247" />
+    <state x="571" y="28" key="CommitChangelistDialog2" timestamp="1585262356325">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="28" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585142897604" />
+    <state x="571" y="28" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585262356325" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1584105289991">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -240,14 +249,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="659" y="229" key="MultipleFileMergeDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585142714796" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1585142903025">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1585262383346">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585142903025" />
-    <state x="689" y="295" key="git4idea.merge.GitPullDialog" timestamp="1585142707671">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585262383346" />
+    <state x="689" y="295" key="git4idea.merge.GitPullDialog" timestamp="1585262380244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="689" y="295" key="git4idea.merge.GitPullDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585142707671" />
+    <state x="689" y="295" key="git4idea.merge.GitPullDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1585262380244" />
     <state x="539" y="183" key="search.everywhere.popup" timestamp="1584444303499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
